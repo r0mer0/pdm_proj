@@ -1,0 +1,78 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="mobi.mobilidade.Controllers.chatActivity">
+
+    <include layout="@layout/app_bar"
+        android:id="@+id/chat_activity_toolbar"/>
+    <LinearLayout
+        android:layout_below="@id/chat_activity_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:elevation="4dp"
+        android:background="#fff"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <com.pkmmte.view.CircularImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/profilepicture"
+            app:border_color="#FFFF"
+            app:border_width="0dp"
+            android:transitionName="profile_picture"
+            app:shadow="true" />
+        <LinearLayout
+            android:paddingLeft="10dp"
+
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="left|center_vertical">
+        <TextView
+            android:id="@+id/username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="UserName"
+            android:textSize="20dp"
+            android:textColor="#000"
+
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cargo"
+            android:textSize="12dp"
+            android:textColor="#000"
+            />
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:weightSum="10"
+        android:elevation="4dp"
+        android:background="#fff"
+        android:layout_alignParentBottom="true">
+        <EditText
+            android:layout_weight="8"
+            android:elevation="4dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        <Button
+            android:layout_weight="2"
+            android:background="@drawable/ic_send_red_400_24dp"
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+
+
+</RelativeLayout>
